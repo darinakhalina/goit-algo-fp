@@ -47,7 +47,6 @@ def draw_graph(graph):
         for neighbor, weight in edges.items():
             G.add_edge(vertex, neighbor, weight=weight)
 
-    random_seed = 42
     pos = nx.spring_layout(G)
 
     labels = {vertex: str(vertex) for vertex in G.nodes}
