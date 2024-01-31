@@ -54,7 +54,15 @@ def draw_graph(graph):
         (edge[0], edge[1]): str(graph.vertices[edge[0]][edge[1]]) for edge in G.edges
     }
 
-    nx.draw(G, pos, with_labels=True, labels=labels, font_weight="bold")
+    nx.draw(
+        G,
+        pos,
+        with_labels=True,
+        labels=labels,
+        font_weight="normal",
+        edge_color="lightgray",
+        node_color="lightblue",
+    )
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
 
     plt.show()
@@ -75,9 +83,9 @@ g.add_vertex("Nauky")
 g.add_edge("Tankopiya", "Kharkivskykh Dyvizii", 2)
 g.add_edge("Kharkivskykh Dyvizii", "Oleksandrivskyj", 3)
 g.add_edge("Tankopiya", "Oleksandrivskyj", 9)
-g.add_edge("Kharkivskykh Dyvizii", "Heroiv Kharkova", 14)
+g.add_edge("Kharkivskykh Dyvizii", "Heroiv Kharkova", 3)
 g.add_edge("Oleksandrivskyj", "12-ho Kvitnya", 4)
-g.add_edge("Heroiv Kharkova", "Pavlivska Square", 3)
+g.add_edge("Heroiv Kharkova", "Pavlivska Square", 14)
 g.add_edge("12-ho Kvitnya", "Louis Pasteur", 6)
 g.add_edge("Pavlivska Square", "Poltavskyi Shliakh", 5)
 g.add_edge("Pavlivska Square", "Sumska", 7)
