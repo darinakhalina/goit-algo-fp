@@ -76,7 +76,6 @@ class LinkedList:
     # Cортування однозв'язного списку
     def insertion_sort(self):
         if self.head is None or self.head.next is None:
-            # Немає або тільки один вузол, вже відсортований
             return
 
         sorted_head = None
