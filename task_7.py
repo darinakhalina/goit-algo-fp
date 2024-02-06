@@ -9,14 +9,14 @@ counts = Counter(rolls)
 
 sorted_keys = sorted(counts.keys())
 
-print("Sum  | Probability")
+print("Сума  | Імовірність")
 print("-----|------------")
 for total_sum in sorted_keys:
     prob = counts[total_sum] / nums
     print(f"{total_sum:2}   | {prob:.2%}")
 
 plt.bar(sorted_keys, [counts[key] / nums for key in sorted_keys])
-plt.xlabel("Sum of Two Dice")
-plt.ylabel("Probability")
-plt.title("Monte Carlo Simulation for Sum of Two Dice")
+plt.xlabel("Сума двох костей")
+plt.ylabel("Імовірність")
+plt.title("Монте-Карло")
 plt.show()
