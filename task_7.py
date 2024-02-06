@@ -9,7 +9,7 @@ counts = Counter(rolls)
 
 sorted_keys = sorted(counts.keys())
 
-print("Сума  | Імовірність")
+print("Сума | Імовірність")
 print("-----|------------")
 for total_sum in sorted_keys:
     prob = counts[total_sum] / nums
